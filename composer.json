@@ -1,5 +1,6 @@
 {
     "name": "vortex-workspace/blazar-router",
+    "minimum-stability": "stable",
     "type": "library",
     "autoload": {
         "psr-4": {
