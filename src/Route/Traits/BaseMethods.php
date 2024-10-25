@@ -2,11 +2,12 @@
 
 namespace BlazarRouter\Route\Traits;
 
+
 use BlazarRouter\Route;
 use BlazarRouter\Route\Enums\HttpMethod;
 use BlazarRouter\Route\Exceptions\InvalidNumberOfArguments;
-use BlazarRouter\Router;
 use BlazarRouter\Router\Exceptions\FailedOnTryAddRoute;
+use BlazarRouter\RouterService;
 use Stellar\Helpers\StrTool;
 
 trait BaseMethods
@@ -20,11 +21,11 @@ trait BaseMethods
      */
     public static function connect(string $route, array|callable|string $action): Route
     {
-        $route = new Route(HttpMethod::CONNECT, $route, $action);
+        $route = new Route(Route\Enums\HttpMethod::CONNECT, $route, $action);
 
         $route->setOriginGroup(self::getOriginFromBacktrace(debug_backtrace()));
 
-        Router::addRoute($route);
+        RouterService::addRoute($route);
 
         return $route;
     }
@@ -42,7 +43,7 @@ trait BaseMethods
 
         $route->setOriginGroup(self::getOriginFromBacktrace(debug_backtrace()));
 
-        Router::addRoute($route);
+        RouterService::addRoute($route);
 
         return $route;
     }
@@ -60,7 +61,7 @@ trait BaseMethods
 
         $route->setOriginGroup(self::getOriginFromBacktrace(debug_backtrace()));
 
-        Router::addRoute($route);
+        RouterService::addRoute($route);
 
         return $route;
     }
@@ -78,7 +79,7 @@ trait BaseMethods
 
         $route->setOriginGroup(self::getOriginFromBacktrace(debug_backtrace()));
 
-        Router::addRoute($route);
+        RouterService::addRoute($route);
 
         return $route;
     }
@@ -96,7 +97,7 @@ trait BaseMethods
 
         $route->setOriginGroup(self::getOriginFromBacktrace(debug_backtrace()));
 
-        Router::addRoute($route);
+        RouterService::addRoute($route);
 
         return $route;
     }
@@ -114,7 +115,7 @@ trait BaseMethods
 
         $route->setOriginGroup(self::getOriginFromBacktrace(debug_backtrace()));
 
-        Router::addRoute($route);
+        RouterService::addRoute($route);
 
         return $route;
     }
@@ -132,7 +133,7 @@ trait BaseMethods
 
         $route->setOriginGroup(self::getOriginFromBacktrace(debug_backtrace()));
 
-        Router::addRoute($route);
+        RouterService::addRoute($route);
 
         return $route;
     }
@@ -150,7 +151,7 @@ trait BaseMethods
 
         $route->setOriginGroup(self::getOriginFromBacktrace(debug_backtrace()));
 
-        Router::addRoute($route);
+        RouterService::addRoute($route);
 
         return $route;
     }
@@ -168,7 +169,7 @@ trait BaseMethods
 
         $route->setOriginGroup(self::getOriginFromBacktrace(debug_backtrace()));
 
-        Router::addRoute($route);
+        RouterService::addRoute($route);
 
         return $route;
     }

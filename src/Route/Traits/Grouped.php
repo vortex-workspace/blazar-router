@@ -2,7 +2,8 @@
 
 namespace BlazarRouter\Route\Traits;
 
-use Stellar\Core\Routes\Router;
+
+use BlazarRouter\RouterService;
 
 trait Grouped
 {
@@ -13,12 +14,12 @@ trait Grouped
      */
     public static function groupPrefix(string $prefix, callable $routes): void
     {
-        Router::setClosureRoutesPrefix($prefix, $routes);
+        RouterService::setClosureRoutesPrefix($prefix, $routes);
     }
 
     public static function groupController(string $controller, callable $routes): void
     {
-        Router::setClosureRoutesController($controller, $routes);
+        RouterService::setClosureRoutesController($controller, $routes);
     }
 
     /**
@@ -28,7 +29,7 @@ trait Grouped
      */
     public static function groupMiddleware(string|array $middleware, callable $routes): void
     {
-        Router::setClosureRoutesMiddleware($middleware, $routes);
+        RouterService::setClosureRoutesMiddleware($middleware, $routes);
     }
 
     /**
@@ -45,6 +46,6 @@ trait Grouped
         ?string      $prefix = null
     ): void
     {
-        Router::setClosureRoutesGroup($routes, $middleware, $controller, $prefix);
+        RouterService::setClosureRoutesGroup($routes, $middleware, $controller, $prefix);
     }
 }
