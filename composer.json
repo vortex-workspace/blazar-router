@@ -1,0 +1,17 @@
+{
+    "name": "vortex-workspace/blazar-router",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "BlazarRouter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mex3890"
+        }
+    ],
+    "require-dev": {
+        "vortex-workspace/framework": "dev-VTX-14-implement-database-interfaces"
+    }
+}
