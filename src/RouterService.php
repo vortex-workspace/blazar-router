@@ -180,7 +180,7 @@ class RouterService extends AbstractRouterService
             foreach ($methods_routes as $method => $method_routes) {
                 /** @var Route $route */
                 foreach ($method_routes as $route) {
-                    if (isset($custom_route_files[$route->getOriginGroup()]['use_prefix'])) {
+                    if (isset($custom_route_files[$route->getOriginGroup()]['use_prefix']) && $custom_route_files[$route->getOriginGroup()]['use_prefix'] === true) {
                         if (!isset($custom_route_files[$route->getOriginGroup()]['prefix'])) {
                             throw new PrefixIsEnabledButNotFound($route->getOriginGroup());
                         }
