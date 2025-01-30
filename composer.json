@@ -13,6 +13,6 @@
         }
     ],
     "require-dev": {
-        "vortex-workspace/framework": "dev-VTX-14-implement-database-interfaces"
+        "vortex-workspace/framework": "dev-feature/VTX-15-implement-adapters-gateways"
     }
 }
