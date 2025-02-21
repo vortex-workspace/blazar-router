@@ -3335,12 +3335,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vortex-workspace/framework.git",
-                "reference": "5d50c6d80fcffcbafcf1b7bc49921c81840da15d"
+                "reference": "2b512ea7afb00c1a7430aaed750f7fcf4747ab5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vortex-workspace/framework/zipball/5d50c6d80fcffcbafcf1b7bc49921c81840da15d",
-                "reference": "5d50c6d80fcffcbafcf1b7bc49921c81840da15d",
+                "url": "https://api.github.com/repos/vortex-workspace/framework/zipball/2b512ea7afb00c1a7430aaed750f7fcf4747ab5b",
+                "reference": "2b512ea7afb00c1a7430aaed750f7fcf4747ab5b",
                 "shasum": ""
             },
             "require": {
@@ -3370,7 +3370,8 @@
                 "composer/composer": "*",
                 "fakerphp/faker": "~v1.23.1",
                 "phpunit/phpunit": "~10.5.20",
-                "symfony/var-dumper": "~7.0.7"
+                "symfony/var-dumper": "~7.0.7",
+                "vortex-workspace/blazar-router": "dev-feature/BR1-import-logic-from-framework"
             },
             "type": "library",
             "autoload": {
@@ -3400,7 +3401,7 @@
                 "issues": "https://github.com/vortex-workspace/framework/issues",
                 "source": "https://github.com/vortex-workspace/framework/tree/feature/VTX-15-implement-adapters-gateways"
             },
-            "time": "2025-02-01T22:26:03+00:00"
+            "time": "2025-02-21T02:14:08+00:00"
         }
     ],
     "aliases": [],

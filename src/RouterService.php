@@ -5,8 +5,8 @@ namespace BlazarRouter;
 use BlazarRouter\Route\Exceptions\RouteNameAlreadyInUse;
 use BlazarRouter\Router\Exceptions\FailedOnTryAddRoute;
 use BlazarRouter\Router\Exceptions\PrefixIsEnabledButNotFound;
-use Core\Contracts\Boot\ApplicationInterface;
-use Core\Contracts\RequestInterface;
+use Core\Contracts\Route\RouterServiceInterface;
+use Stellar\Routes\AbstractRouterService;
 use Stellar\Setting;
 use Stellar\Settings\Enum\SettingKey;
 use Stellar\Settings\Exceptions\InvalidSettingException;
@@ -30,17 +30,6 @@ class RouterService extends AbstractRouterService
     private array $route_names = [];
     private bool $enable_entrance = true;
     private ?Route $fallback = null;
-
-    public static function getInstance(
-        RequestInterface|null $request = null,
-        ApplicationInterface|null $application = null): static
-    {
-        if (!isset(self::$instance)) {
-            self::$instance = new static();
-        }
-
-        return self::$instance;
-    }
 
     /**
      * @param Route $route
@@ -254,5 +243,10 @@ class RouterService extends AbstractRouterService
     public function getFallbackRoute(): ?Route
     {
         return $this->fallback;
+    }
+
+    public static function parentService(): ?string
+    {
+        return RouterServiceInterface::class;
     }
 }
