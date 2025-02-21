@@ -7,7 +7,7 @@ use BlazarRouter\Router\Exceptions\PrefixIsEnabledButNotFound;
 use Core\Contracts\RequestInterface;
 use Stellar\Settings\Exceptions\InvalidSettingException;
 
-class RouteMatch extends AbstractRouteMatch
+class RouteMatch extends \AbstractRouteMatcher
 {
     /**
      * @param RequestInterface $request

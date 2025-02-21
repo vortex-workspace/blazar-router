@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f32249a5a856ceaf02bcfb77e1019cfc",
+    "content-hash": "3f616e4c8a13fff97ae414a24fdd3b9a",
     "packages": [],
     "packages-dev": [
         {
@@ -3331,16 +3331,16 @@
         },
         {
             "name": "vortex-workspace/framework",
-            "version": "dev-VTX-14-implement-database-interfaces",
+            "version": "dev-feature/VTX-15-implement-adapters-gateways",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vortex-workspace/framework.git",
-                "reference": "8cf745bc995b966f111cf9960e1f3f126ae90e56"
+                "reference": "5d50c6d80fcffcbafcf1b7bc49921c81840da15d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vortex-workspace/framework/zipball/8cf745bc995b966f111cf9960e1f3f126ae90e56",
-                "reference": "8cf745bc995b966f111cf9960e1f3f126ae90e56",
+                "url": "https://api.github.com/repos/vortex-workspace/framework/zipball/5d50c6d80fcffcbafcf1b7bc49921c81840da15d",
+                "reference": "5d50c6d80fcffcbafcf1b7bc49921c81840da15d",
                 "shasum": ""
             },
             "require": {
@@ -3351,6 +3351,7 @@
                 "ext-intl": "*",
                 "ext-libxml": "*",
                 "ext-mbstring": "*",
+                "ext-mysqli": "*",
                 "ext-openssl": "*",
                 "ext-simplexml": "*",
                 "guzzlehttp/guzzle": "~7.8.0",
@@ -3397,9 +3398,9 @@
             ],
             "support": {
                 "issues": "https://github.com/vortex-workspace/framework/issues",
-                "source": "https://github.com/vortex-workspace/framework/tree/VTX-14-implement-database-interfaces"
+                "source": "https://github.com/vortex-workspace/framework/tree/feature/VTX-15-implement-adapters-gateways"
             },
-            "time": "2024-10-24T23:44:50+00:00"
+            "time": "2025-02-01T22:26:03+00:00"
         }
     ],
     "aliases": [],
