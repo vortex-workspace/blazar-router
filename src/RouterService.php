@@ -238,8 +238,10 @@ class RouterService extends AbstractRouterService
 
     private function addPrefixedRoute(string $method, Route $route, ?string $group_prefix = null): void
     {
+        $prefixed_route = $route->getPrefixedRoute();
+
         $this->prefixed_routes[$method][$group_prefix ?
-            "$group_prefix/{$route->getPrefixedRoute()}" :
+            ($prefixed_route === '' ? $group_prefix : "$group_prefix/{$prefixed_route}") :
             $route->getPrefixedRoute()] = $route;
     }
 
