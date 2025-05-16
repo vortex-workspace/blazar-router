@@ -4,7 +4,6 @@ namespace BlazarRouter;
 
 use BlazarRouter\RouteDriver\Exceptions\RouteNotFoundException;
 use BlazarRouter\Router\Exceptions\PrefixIsEnabledButNotFound;
-use Core\Contracts\RequestInterface;
 use Stellar\Request;
 use Stellar\Routes\AbstractRoute;
 use Stellar\Routes\AbstractRouteMatcher;
@@ -14,7 +13,7 @@ class RouteMatch extends AbstractRouteMatcher
 {
     private AbstractRoute $route;
 
-    public function __construct(private Request $request)
+    public function __construct(private readonly Request $request)
     {
     }
 
