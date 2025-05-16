@@ -17,6 +17,7 @@ use ReflectionParameter;
 use Stellar\Helpers\StrTool;
 use Stellar\Helpers\Typography\Enum\Typography;
 use Stellar\Request;
+use Stellar\Routes\AbstractRoute;
 
 class Route extends AbstractRoute
 {

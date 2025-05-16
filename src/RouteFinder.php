@@ -7,6 +7,7 @@ use BlazarRouter\Router\Exceptions\PrefixIsEnabledButNotFound;
 use Stellar\Navigation\Directory;
 use Stellar\Navigation\Enums\ApplicationPath;
 use Stellar\Navigation\Path\Exceptions\PathNotFound;
+use Stellar\Routes\AbstractRouteFinder;
 use Stellar\Settings\Exceptions\InvalidSettingException;
 
 class RouteFinder extends AbstractRouteFinder

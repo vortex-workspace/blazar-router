@@ -11,6 +11,9 @@ use Stellar\Setting;
 use Stellar\Settings\Enum\SettingKey;
 use Stellar\Settings\Exceptions\InvalidSettingException;
 
+/**
+ * @method static RouterService getInstance
+ */
 class RouterService extends AbstractRouterService
 {
     public static function finder(): string
@@ -145,7 +148,7 @@ class RouterService extends AbstractRouterService
      * @return RouterService
      * @throws RouteNameAlreadyInUse
      */
-    public function loadNames(): RouterService
+    public function loadNames(): static
     {
         self::flushRoutes();
 
