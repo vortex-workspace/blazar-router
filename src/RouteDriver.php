@@ -34,7 +34,7 @@ class RouteDriver
     {
         $routes = RouterService::getInstance()->getRoutes();
         $method = $this->request->method();
-        $uri = StrTool::removeIfStartAndFinishWith($this->request->uri(), '/');
+        $uri = StrTool::trim($this->request->uri());
 
         self::$route = $this->pipelineGetRoute($routes, $method, $uri);
     }

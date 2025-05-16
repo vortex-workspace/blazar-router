@@ -51,17 +51,7 @@ class Route extends AbstractRoute
     )
     {
         $this->is_fallback = $is_fallback;
-
-        while (StrTool::startWith($route, [Typography::Slash->value, Typography::Backslash->value])
-            || StrTool::finishWith($route, [Typography::Slash->value, Typography::Backslash->value])
-        ) {
-            $route = StrTool::removeIfStartAndFinishWith(
-                $route,
-                [Typography::Slash->value, Typography::Backslash->value]
-            );
-        }
-
-        $this->route = $route;
+        $this->route = StrTool::trim($route);
 
         if (is_array($action)) {
             if (count($action) === 2) {
